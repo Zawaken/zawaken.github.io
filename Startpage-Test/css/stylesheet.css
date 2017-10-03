@@ -25,7 +25,9 @@
 }
 
 body {
-    background-image: url("../images/wp1.png");
+}
+#rotator {
+    background-image: url("../images/rotator.php");
     background-size: cover;
 	min-height: 100%;
     background-repeat: no-repeat;

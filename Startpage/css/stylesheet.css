@@ -27,6 +27,7 @@
 body {
     background-image: url("../images/wp1.png");
     background-size: cover;
+	min-height: 100%;
     background-repeat: no-repeat;
     background-color: #010028;
     margin: 0;

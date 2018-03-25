@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DDG Search</title>
+	<link rel="icon" href="https://zawaken.github.io/favicon.png">
+	<meta charset="utf-8">
+	<link type="text/css" rel="stylesheet" href="ddg/css/stylesheet.css"
+</head>
+<body>
+	<img src="ddg/DuckDuckGoLogo.png" alt="ddg logo" style="width:600px;height:476px;">
+	<div class="search-row">
+		<input id="search-field" type="text" name="search-field" placeholder="Search in duckduckgo [!g / !w / !yt]" onkeypress="return search(event)" autofocus/>
+		<script type="text/javascript">
+		function search(e) {
+			if (e.keyCode == 13) {
+				var val = $("#search-field").val();
+				window.location = "https://duckduckgo.com/?q=" + val;
+				return false;
+			}
+		}
+		</script>
+	</div>
+	<div class="terminal-innerCon">
+		<div class="favCon">
+			<div class="favCon-header">
+				<span>favorites</span>
+			</div>
+			<div class="favCon-body">
+				<a href="https://github.com/zawaken" onfocus="if(this.blur)this.blur()">
+					<div class="favCon-el">
+						<div class="favCon-el-content">
+							<span>my github</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://www.youtube.com" onfocus="if(this.blur)this.blur()">
+					<div class="favCon-el">
+						<div class="favCon-el-content">
+							<span>youtube</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://www.reddit.com" onfocus="if(this.blur)this.blur()">
+					<div class="favCon-el">
+						<div class="favCon-el-content">
+							<span>reddit</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://twist.moe" onfocus="if(this.blur)this.blur()">
+					<div class="favCon-el">
+						<div class="favCon-el-content">
+							<span>animetwist</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="favCon">
+			<div class="favCon-header">
+				<span>forums</span>
+			</div>
+			<div class="favCon-body">
+				<a href="https://forum.xda-developers.com/" onfocus="if(this.blur)this.blur()">
+					<div class="favCon-el">
+						<div class="favCon-el-content">
+							<span>xda forum</span>
+						</div>
+					</div>
+				</a>
+				 <a href="https://osu.ppy.sh/forum" onfocus="if(this.blur)this.blur()">
+					<div class="favCon-el">
+						<div class="favCon-el-content">
+							<span>osu! forum</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://www.reddit.com" onfocus="if(this.blur)this.blur()">
+					<div class="favCon-el">
+						<div class="favCon-el-content">
+							<span>reddit</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://myanimelist.net" onfocus="if(this.blur)this.blur()">
+					<div class="favCon-el">
+						<div class="favCon-el-content">
+							<span>myanimelist</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="favCon">
+			<div class="favCon-header">
+				<span>stuff</span>
+			</div>
+			<div class="favCon-body">
+				<a href="https://netflix.com/" onfocus="if(this.blur)this.blur()">
+					<div class="favCon-el">
+						<div class="favCon-el-content">
+							<span>netflix</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://www.humblebundle.com/" onfocus="if(this.blur)this.blur()">
+					<div class="favCon-el">
+						<div class="favCon-el-content">
+							<span>humble bundle</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://osu.ppy.sh/u/Zawaken" onfocus="if(this.blur)this.blur()">
+					<div class="favCon-el">
+						<div class="favCon-el-content">
+							<span>my osu! profile</span>
+						</div>
+					</div>
+				</a>
+				<a href="https://ameobea.me/osutrack/user/zawaken/" onfocus="if(this.blur)this.blur()">
+					<div class="favCon-el">
+						<div class="favCon-el-content">
+							<span>my osu!track stats</span>
+						</div>
+					</div>
+				</a>
+			</div>
+</body>
+</html>

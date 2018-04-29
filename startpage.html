@@ -1,193 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Startpage</title>
-	<link rel="icon" href="https://zawaken.github.io/favicon.png">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="author" content="NPL1270018">
-    <meta name="description" content="">
-
-    <link type="text/css" rel="stylesheet" href="Startpage/css/stylesheet.css">
-    <link type="text/css" rel="stylesheet" href="Startpage/font-awesome/css/font-awesome.min.css">
-
-    <script type="text/javascript" src="Startpage/js/jquery-2.2.2.min.js"></script>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/awoo.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200|Roboto:100,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>~</title>
 </head>
 <body>
-    <div id="wrapper">
-        <div id="header"><span id="header-time"></span></div>
-        <script type="text/javascript">
-            var dt = new Date();
-            minute = "" + dt.getMinutes(); if (minute.length == 1) { minute = "0" + minute; }
-            second = "" + dt.getSeconds(); if (second.length == 1) { second = "0" + second; }
-            var time = dt.getHours() + ":" + minute + ":" + second;
-
-            $("#header-time").text(time);
-
-            setInterval(function(){
-                dt = new Date();
-                minute = "" + dt.getMinutes(); if (minute.length == 1) { minute = "0" + minute; }
-                second = "" + dt.getSeconds(); if (second.length == 1) { second = "0" + second; }
-                time = dt.getHours() + ":" + minute + ":" + second;
-                console.log(time);
-                $("#header-time").text(time);
-
-            },1000);
-        </script>
-        <div class="search-row">
-            <input id="search-field" type="text" name="search-field" placeholder="Search in duckduckgo [!g / !w / !yt]" onkeypress="return search(event)" autofocus/>
-            <script type="text/javascript">
-            function search(e) {
-                if (e.keyCode == 13) {
-                    var val = $("#search-field").val();
-                    window.location = "https://duckduckgo.com/?q=" + val;
-                    return false;
-                }
-            }
-            </script>
+    <div id="links" class="-">
+        <div id="tabs" class="!-">
+            <cols>
+                <ul class="-">
+                    <li active></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="+ widgets col-end">
+                    <p class="time">00<span>:00</span></p>
+                    <div class="+ weather">
+                        <p temperature>4ºC</p>
+                        <p weather class="+">
+                            <i class="material-icons" sunny>wb_sunny</i>
+                        </p>
+                    </div>
+                </div>
+            </cols>
         </div>
-        <div class="terminal-con">
-            <div class="terminal-row ext-top">
-                <div class="terminal-label"><span class="hl-gray">---------------------------------------------------</span></div>
-            </div>
-            <div class="terminal-row">
-                <div class="terminal-label i1"><span class="hl-gray">Last login: </span></div>
-                <div id="time"></div>
-                <script type="text/javascript">
-                    var dt = new Date();
-                    var time = dt.getDate() + "." + (dt.getMonth()+1) + "." + dt.getFullYear() + " " + dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-
-                    $("#time").text(time);
-
-                    setInterval(function(){
-                        dt = new Date();
-                        time = dt.getDate() + "." + (dt.getMonth()+1) + "." + dt.getFullYear() + " " + dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-                        console.log(time);
-                        $("#time").text(time);
-
-                    },);
-                </script>
-            </div>
-            <div class="terminal-row">
-                <div class="terminal-label i1"><span class="hl-gray">Welcome to your startpage <span class="hl-blue">Zawaken</span>.</span></div>
-            </div>
-            <div class="terminal-row">
-                <div class="terminal-label"><span class="hl-gray">---------------------------------------------------</span></div>
-            </div>
-            <div class="terminal-row">
-                <div class="terminal-label"><span><span class="hl-red">zawaken@purity</span><span class="hl-blue"> > /usr/local/bin </span><span class="hl-gray">./showfavpages.sh</span></span></div>
-            </div>
-            <div class="terminal-innerCon">
-                <div class="favCon">
-                    <div class="favCon-header">
-                        <span>favorites</span>
-                    </div>
-                    <div class="favCon-body">
-                        <a href="https://github.com/zawaken" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>my github</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://www.youtube.com" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>youtube</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://www.reddit.com" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>reddit</span>
-                                </div>
-                            </div>
-                        </a>
-						<a href="https://twist.moe" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>ツイスト</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+        <div id="panels">
+            <ul class="boards" active>
+                <div class="links">
+                    <li>
+                        <h1>Fun</h1>
+                        <a href="https://4chan.org/a/">/a/</a>
+                        <a href="https://4chan.org/b/">/b/</a>
+                        <a href="https://4chan.org/jp/">/jp/</a>
+                        <a href="https://4chan.org/r9k/">/r9k/</a>
+                        <a href="https://www.4chan.org/wg/">/wg/</a>
+                    </li>
+                    <li>
+                        <h1>Comfy</h1>
+                        <a href="https://sushigirl.us/kawaii/">/kawaii/</a>
+                        <a href="https://sushigirl.us/lounge/">/lounge/</a>
+                        <a href="https://www.4chan.org/wsg/">/wsg/</a>
+                    </li>
+                    <li>
+                        <h1>Technology</h1>
+                        <a href="https://4chan.org/g/">/g/</a>
+                        <a href="https://www.lainchan.org/lambda/">/λ/</a>
+                        <a href="https://www.lainchan.org/sec/">/sec/</a>
+                        <a href="https://boards.420chan.org/prog/">/prog/</a>
+                        <a href="https://8ch.net/g/">/8g/</a>
+                    </li>
                 </div>
-                <div class="favCon">
-                    <div class="favCon-header">
-                        <span>forums</span>
-                    </div>
-                    <div class="favCon-body">
-                        <a href="https://forum.xda-developers.com/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>xda forum</span>
-                                </div>
-                            </div>
-                        </a>
-                         <a href="https://osu.ppy.sh/forum" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>osu! forum</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://www.reddit.com" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>reddit</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://kitsu.io/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>kitsu</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+            </ul>
+            <ul class="music">   
+                <div class="links">
+                    <li><a href="https://soundcloud.com/">soundcloud</a></li>
+                    <li><a href="http://lolicore.org/">lolicore</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=FLdYG2Q_1DDrt0PoeoRicihw">y-playlist</a></li>
+                    <li><a href="https://lainchan.org/music/res/898.html">/music/</a></li>
                 </div>
-                <div class="favCon">
-                    <div class="favCon-header">
-                        <span>stuff</span>
-                    </div>
-                    <div class="favCon-body">
-                        <a href="https://netflix.com/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>netflix</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://www.humblebundle.com/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>humble bundle</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://osu.ppy.sh/users/3497992" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>my osu! profile</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://mail.protonmail.com/login" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>protonmail</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+            </ul>
+            <ul class="tech">
+                <div class="links">
+                    <li><a href="https://arisuchan.jp/">arisuchan</a></li>
+                    <li><a href="https://systemspace.link/">つき</a></li>
+                    <li><a href="https://docs.racket-lang.org/">racket</a></li>
+                    <li><a href="http://afternoon.dynu.com/letterbox.html">post office</a></li>
                 </div>
-            </div>
-          <div class="terminal-row ext-btm">
-              <div class="terminal-label"><span><span class="hl-red">zawaken@purity</span><span class="hl-blue"> > /usr/local/bin </span><span class="hl-gray"></span></span></div>
-            </div>
+            </ul>
         </div>
     </div>
+    <div class="|" id="todo">
+        <button class="+ add"><img src="img/add.png"></button>
+        <div class="+ addTodo">
+            <input type="text" value="" placeholder="todo" spellcheck="false">
+        </div>
+        <rows class="items">
+            <h1 class="+">todo</h1>
+        </rows>
+    </div>
+    <script type="text/javascript" src="js/strftime.js"></script>
+    <script type="text/javascript" src="js/todo.js"></script>
+    <script type="text/javascript" src="js/weather.js"></script>
+    <script type="text/javascript" src="js/powerline.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

@@ -20,15 +20,6 @@
                 </ul>
         		<div class="search-row">
             		<input id="search-field" type="text" name="search-field" placeholder="" onkeypress="return search(event)" autofocus/>
-            		<script type="text/javascript">
-            		function search(e) {
-                		if (e.keyCode == 13) {
-                			var val = document.getElementById("search-field").value; 
-                    		window.location = "https://duckduckgo.com/?q=" + val;
-                    		return false;
-                			}
-            			}
-            		</script>
         		</div>
                 <div class="+ widgets col-end">
                     <p class="time">00<span>:00</span></p>
@@ -105,5 +96,6 @@
     <script type="text/javascript" src="js/weather.js"></script>
     <script type="text/javascript" src="js/powerline.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
 </body>
 </html>
